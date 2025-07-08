@@ -1,9 +1,11 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Global */
 body {
   font-family: Arial, sans-serif;
   background: #111;
@@ -16,6 +18,7 @@ body {
   padding: 20px;
 }
 
+/* Header & Nav */
 .header {
   background: #222;
   padding: 20px 0;
@@ -58,6 +61,7 @@ body {
   cursor: pointer;
 }
 
+/* Visi Misi & Cerita */
 .visimisi {
   display: flex;
   flex-wrap: wrap;
@@ -75,6 +79,7 @@ body {
   margin-top: 30px;
 }
 
+/* Slider */
 .slider-section {
   background: #181818;
   overflow: hidden;
@@ -91,6 +96,19 @@ body {
   animation: slide-left 40s linear infinite;
 }
 
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .slide {
   min-width: 150px;
   margin-right: 20px;
@@ -103,17 +121,32 @@ body {
   object-fit: cover;
   border-radius: 10px;
   border: 2px solid #ffcc00;
+  transition: transform 0.3s;
 }
 
-.slider-track:hover {
-  animation-play-state: paused;
+.slide img:hover {
+  transform: scale(1.05);
 }
 
-@keyframes slide-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* Social Icons */
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
+.social-icons a {
+  color: #ffcc00;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+}
+
+/* Footer */
 .footer {
   background: #222;
   text-align: center;
