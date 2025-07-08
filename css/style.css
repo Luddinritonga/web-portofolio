@@ -8,9 +8,15 @@
 /* Global */
 body {
   font-family: Arial, sans-serif;
-  background: #111;
+  /* background-image: url('/images/luddin.jpg'); Ganti path sesuai lokasi gambar */
+  background-color: black;
+  background-size: cover;          /* Agar gambar menutupi seluruh layar */
+  background-repeat: no-repeat;    /* Hindari pengulangan gambar */
+  background-position: center;     /* Pusatkan gambar */
+  background-attachment: fixed;    /* Tetap di tempat saat scroll */
   color: #eee;
 }
+
 
 .container {
   max-width: 1100px;
@@ -20,8 +26,8 @@ body {
 
 /* Header & Nav */
 .header {
-  background: rgba(0, 0, 255, 0);
-  padding: 20px 0;
+  background: rgba(184, 49, 49, 1);
+  padding: 10px;
   position: sticky;
   top: 0;
   z-index: 999;
